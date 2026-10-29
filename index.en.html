@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'" />
+  <title>A form, step by step.</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.mjs"></script>
+</head>
+<body data-page="index">
+  <a class="skip" href="#main" data-copy="skip">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <a data-route="index" data-copy="brand" href="index.en.html" class="brand">Forms</a>
+      <nav class="primary-nav" data-label="navigation" aria-label="Main navigation">
+        <a data-route="index" data-copy="home" href="index.en.html" aria-current="page">Home</a>
+        <a data-route="register" data-copy="practice" href="register.en.html">Practice</a>
+      </nav>
+      <nav class="languages" data-label="language" aria-label="Language">
+        <a data-language="es" href="index.html" hreflang="es" lang="es" >ES</a>
+        <span aria-hidden="true">/</span>
+        <a data-language="en" href="index.en.html" hreflang="en" lang="en" aria-current="page">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="home-main" tabindex="-1">
+    <section class="home-intro" aria-labelledby="title">
+      <h1 data-copy="homeTitle" id="title">A form, step by step.</h1>
+      <p data-copy="homeLead" class="lead">Fill in fictional fields, review the errors and start again.</p>
+      <a data-route="register" data-copy="open" href="register.en.html" class="primary-action">Open practice</a>
+      <p data-copy="scope" class="scope">Local practice. It sends no data and creates no account.</p>
+    </section>
+    <dl class="steps">
+      <div><dt data-copy="complete">Fill in</dt><dd data-copy="completeBody">Use example values to try the fields.</dd></div>
+      <div><dt data-copy="review">Review</dt><dd data-copy="reviewBody">Errors are explained next to each field.</dd></div>
+      <div><dt data-copy="restart">Reset</dt><dd data-copy="restartBody">Clear the values to begin another check.</dd></div>
+    </dl>
+  </main>
+  <footer><p data-copy="attribution">Original paired practice · Manuel Naval and Alejandro Ramírez</p></footer>
+</body>
+</html>

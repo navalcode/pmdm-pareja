@@ -1,0 +1,90 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "11817167086bf441016c439a420962787d034d1ddfafa4fefc7302f916932591"
+  },
+  {
+    "path": "DESIGN.md",
+    "sha256": "06458edb8c401015be3c0667103c74e0266e7877ee647ee1be6ef075e6bd2dd7"
+  },
+  {
+    "path": "README.es.md",
+    "sha256": "45187b8781e4e184d702ed812b8e9b19940ab35016e9990ab46d323836bb125a"
+  },
+  {
+    "path": "README.md",
+    "sha256": "201e8e85a375e0e377de325a65a1a27295160d01fc1cb1b28828a9f2ca912ec4"
+  },
+  {
+    "path": "THIRD_PARTY.md",
+    "sha256": "b0f6337ae40d1687b655e22a01204b1a95bea7f93af6dc503ceaca63c9ff478e"
+  },
+  {
+    "path": "app.mjs",
+    "sha256": "32cb2c72cf1ed6d84662abc4138ce1f8ac8594beb175e3dbf3fb5d9a79a75fbd"
+  },
+  {
+    "path": "build.mjs",
+    "sha256": "80c2258f9b8b9fee18a609cd3f5a31a70b73870096ac0cb3df893c73cdd5162e"
+  },
+  {
+    "path": "copy.mjs",
+    "sha256": "fc5835936b434bdcb64fcb5ebf3b47051bf372782d0987b07e53ac79c29899d3"
+  },
+  {
+    "path": "docs/images/form-en-desktop.png",
+    "sha256": "0eecdbf23017084a686bedcec66a80417c9f19db97d614d72a3d153c70e5ce73"
+  },
+  {
+    "path": "docs/images/form-es-error-mobile.png",
+    "sha256": "ef4b3ac066e598389dbbc08d305df9b436abd0c58882273b5f26c3b7d2cffc4a"
+  },
+  {
+    "path": "docs/images/form-es-mobile.png",
+    "sha256": "8be0cba0b4ae2d2cd90d87177de647e0d74b219ebf9bc312cc98bfac78aa28ed"
+  },
+  {
+    "path": "docs/images/home-es-desktop.png",
+    "sha256": "a623bdf02c32e38b13ace929b716791312457a53413ff3f030c573a8605144d2"
+  },
+  {
+    "path": "docs/verification.json",
+    "sha256": "e2260a313f7c45ea77a7e70d457829ee163865559fc14ee4a2d43c79c486fb2f"
+  },
+  {
+    "path": "fonts/OFL.txt",
+    "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+  },
+  {
+    "path": "fonts/Outfit.woff2",
+    "sha256": "ed629d88c2db8ace1b3ac85fbf1fe0223d7272defaa817d1955100101966f0fb"
+  },
+  {
+    "path": "index.en.html",
+    "sha256": "b69639b3765ff7fd1d470e09e158eed243fc9365607cf9aacd4601746fda2932"
+  },
+  {
+    "path": "index.html",
+    "sha256": "7a56d312f03c6eeb9534bed4d6f223882a27d9b0d03b70b69774329d7c602665"
+  },
+  {
+    "path": "register.en.html",
+    "sha256": "af97ecccf46289a73188931c414e098f3895330f850b1575efd2f1f956e1182e"
+  },
+  {
+    "path": "register.html",
+    "sha256": "dd1f2934f64b6de48088fb457bb8281642fd417ffc0bdd6f4098295257795855"
+  },
+  {
+    "path": "styles.css",
+    "sha256": "eef60583cf397be119521de2f8f01a6fc3428b7279097db032519e3f3a28ee46"
+  },
+  {
+    "path": "tests/validation.test.mjs",
+    "sha256": "01ef5fd198107da013edd809b08d421d4f9c9770d01ca1dde12582c290d1828f"
+  },
+  {
+    "path": "validation.mjs",
+    "sha256": "f1b5a4871ac355f065910100fb70106836277ed551acdc83261c2761609b9339"
+  }
+]

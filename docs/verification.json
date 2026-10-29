@@ -1,0 +1,98 @@
+{
+  "repository": "pmdm-pareja",
+  "date": "2026-10-29",
+  "environment": "macOS / Node.js 22.22.3",
+  "commands": [
+    {
+      "command": "node build.mjs --check",
+      "exit_code": 0,
+      "log_sha256": "f9da1a365d14a9ccc2b37e02a9ebcc2d51f324ab71c28d6c411c3da8f3785f27"
+    },
+    {
+      "command": "node --test tests/validation.test.mjs",
+      "exit_code": 0,
+      "log_sha256": "d5ae715a3f04f24b0fd21840a8dbb45c74f73dc365e3a9a6c051e92b8e52ace6"
+    },
+    {
+      "command": "node --check app.mjs",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "node --check build.mjs",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "node --check validation.mjs",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "node --check copy.mjs",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tests": 13,
+  "passed": 13,
+  "failed": 0,
+  "skipped": 0,
+  "generated_localized_pages": 4,
+  "http_assets_byte_identical": 10,
+  "no_script_fixtures_byte_verified": 4,
+  "browser_viewports": [
+    "1366x768",
+    "360x800",
+    "800x360"
+  ],
+  "form_interaction_request_delta": 0,
+  "form_input_serializable_names": 0,
+  "runtime_dependencies": 0,
+  "hosted_ci_added": false,
+  "pages_deployed": false,
+  "authorship": "Original paired coursework: Manuel Naval and Alejandro Ram\u00edrez. Later review preserves those credits without assigning joint authorship of refinements.",
+  "screenshots": [
+    "docs/images/home-es-desktop.png",
+    "docs/images/form-en-desktop.png",
+    "docs/images/form-es-mobile.png",
+    "docs/images/form-es-error-mobile.png"
+  ],
+  "limits": [
+    "No backend/account/identity/email verification",
+    "Illustrative password constraint; no production security audit",
+    "No screen reader or formal WCAG certification",
+    "No OS reduced-motion emulation or physical device claim"
+  ],
+  "standard_server_checked": {
+    "command": "python3 -m http.server 0 --bind 127.0.0.1",
+    "port_note": "0 selects an available port; README uses8080 as an example",
+    "python": "Python 3.14.2",
+    "checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "content_type": "text/html",
+        "matches_source": true
+      },
+      {
+        "path": "app.mjs",
+        "status": 200,
+        "content_type": "text/javascript",
+        "matches_source": true
+      },
+      {
+        "path": "copy.mjs",
+        "status": 200,
+        "content_type": "text/javascript",
+        "matches_source": true
+      },
+      {
+        "path": "validation.mjs",
+        "status": 200,
+        "content_type": "text/javascript",
+        "matches_source": true
+      }
+    ]
+  }
+}

@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algo Bonito</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'" />
+  <title>Un formulario, paso a paso.</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.mjs"></script>
 </head>
-<body>
-    <h1>Esto es un texto de prueba</h1>
+<body data-page="index">
+  <a class="skip" href="#main" data-copy="skip">Saltar al contenido</a>
+  <header>
+    <div class="header-inner">
+      <a data-route="index" data-copy="brand" href="index.html" class="brand">Formularios</a>
+      <nav class="primary-nav" data-label="navigation" aria-label="Navegación principal">
+        <a data-route="index" data-copy="home" href="index.html" aria-current="page">Inicio</a>
+        <a data-route="register" data-copy="practice" href="register.html">Práctica</a>
+      </nav>
+      <nav class="languages" data-label="language" aria-label="Idioma">
+        <a data-language="es" href="index.html" hreflang="es" lang="es" aria-current="page">ES</a>
+        <span aria-hidden="true">/</span>
+        <a data-language="en" href="index.en.html" hreflang="en" lang="en" >EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="home-main" tabindex="-1">
+    <section class="home-intro" aria-labelledby="title">
+      <h1 data-copy="homeTitle" id="title">Un formulario, paso a paso.</h1>
+      <p data-copy="homeLead" class="lead">Completa campos ficticios, revisa los errores y vuelve a empezar.</p>
+      <a data-route="register" data-copy="open" href="register.html" class="primary-action">Abrir práctica</a>
+      <p data-copy="scope" class="scope">Práctica local. No envía datos ni crea una cuenta.</p>
+    </section>
+    <dl class="steps">
+      <div><dt data-copy="complete">Completar</dt><dd data-copy="completeBody">Usa datos de ejemplo para probar los campos.</dd></div>
+      <div><dt data-copy="review">Revisar</dt><dd data-copy="reviewBody">Los errores se explican junto a cada campo.</dd></div>
+      <div><dt data-copy="restart">Restablecer</dt><dd data-copy="restartBody">Limpia los valores para comenzar otra prueba.</dd></div>
+    </dl>
+  </main>
+  <footer><p data-copy="attribution">Práctica original en pareja · Manuel Naval y Alejandro Ramírez</p></footer>
 </body>
 </html>

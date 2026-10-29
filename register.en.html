@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'" />
+  <title>Check the form.</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.mjs"></script>
+</head>
+<body data-page="register">
+  <a class="skip" href="#main" data-copy="skip">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <a data-route="index" data-copy="brand" href="index.en.html" class="brand">Forms</a>
+      <nav class="primary-nav" data-label="navigation" aria-label="Main navigation">
+        <a data-route="index" data-copy="home" href="index.en.html">Home</a>
+        <a data-route="register" data-copy="practice" href="register.en.html" aria-current="page">Practice</a>
+      </nav>
+      <nav class="languages" data-label="language" aria-label="Language">
+        <a data-language="es" href="register.html" hreflang="es" lang="es" >ES</a>
+        <span aria-hidden="true">/</span>
+        <a data-language="en" href="register.en.html" hreflang="en" lang="en" aria-current="page">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="practice-main" tabindex="-1">
+    <section class="form-intro" aria-labelledby="title">
+      <h1 data-copy="formTitle" id="title">Check the form.</h1>
+      <p data-copy="formLead" class="lead">Local practice. It sends no data and creates no account.</p>
+      <p data-copy="requiredHint">All four fields are required. Use fictional values.</p>
+    </section>
+    <div class="form-content">
+      <p data-copy="unavailable" id="availability">JavaScript is needed to check this practice. Fields stay disabled while it is unavailable.</p>
+      <section id="errors" class="error-summary" aria-labelledby="error-title" tabindex="-1" hidden>
+        <h2 id="error-title">Review the indicated fields.</h2>
+        <ul id="error-list"></ul>
+      </section>
+      <form id="practice-form" method="post" novalidate autocomplete="off">
+        <fieldset id="practice-fields" disabled>
+          <legend data-copy="fieldsLegend" class="sr-only">Example fields</legend>
+          <div class="field">
+            <label for="firstName" data-copy="firstName">Fictional first name</label>
+            <p data-copy="nameHint" class="hint" id="firstName-hint">Up to 80 characters.</p>
+            <input id="firstName" type="text" maxlength="80" required autocomplete="off" aria-describedby="firstName-hint" />
+            <p id="firstName-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="lastName" data-copy="lastName">Fictional surname</label>
+            <p data-copy="nameHint" class="hint" id="lastName-hint">Up to 80 characters.</p>
+            <input id="lastName" type="text" maxlength="80" required autocomplete="off" aria-describedby="lastName-hint" />
+            <p id="lastName-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email" data-copy="email">Example email</label>
+            <p data-copy="emailHint" class="hint" id="email-hint">For example, ada@example.invalid. This checks format only.</p>
+            <input id="email" type="email" maxlength="254" required autocomplete="off" aria-describedby="email-hint" />
+            <p id="email-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="password" data-copy="password">Example password</label>
+            <p data-copy="passwordHint" class="hint" id="password-hint">For practice only: 8–72 characters. Do not use a real password.</p>
+            <input id="password" type="password" maxlength="72" required autocomplete="off" aria-describedby="password-hint" />
+            <p id="password-error" class="field-error" hidden></p>
+          </div>
+          <div class="actions">
+            <button data-copy="check" type="submit">Check form</button>
+            <button data-copy="clear" type="reset" class="secondary">Clear</button>
+          </div>
+        </fieldset>
+      </form>
+      <p id="result" class="result" role="status" tabindex="-1" hidden></p>
+    </div>
+  </main>
+  <footer><p data-copy="attribution">Original paired practice · Manuel Naval and Alejandro Ramírez</p></footer>
+</body>
+</html>

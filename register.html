@@ -1,27 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Registro</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'" />
+  <title>Comprueba el formulario.</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.mjs"></script>
 </head>
-<body>
-    <form action="/registro" method="post">
-
-           <label for="nombre">Nombre:</label>
-           <input type="text" id="nombre" name="nombre_usuario">
-
-           <label for="apellidos">Apellidos:</label>
-           <input type="text" id="apellidos" name="apellidos_usuario">
-
-           <label for="mail">Correo electrónico:</label>
-           <input type="email" id="mail" name="email_usuario">
-
-           <label for="password">Contraseña:</label>
-           <input type="password" id="password" name="contrasenya_usuario">
-
-       </form>
+<body data-page="register">
+  <a class="skip" href="#main" data-copy="skip">Saltar al contenido</a>
+  <header>
+    <div class="header-inner">
+      <a data-route="index" data-copy="brand" href="index.html" class="brand">Formularios</a>
+      <nav class="primary-nav" data-label="navigation" aria-label="Navegación principal">
+        <a data-route="index" data-copy="home" href="index.html">Inicio</a>
+        <a data-route="register" data-copy="practice" href="register.html" aria-current="page">Práctica</a>
+      </nav>
+      <nav class="languages" data-label="language" aria-label="Idioma">
+        <a data-language="es" href="register.html" hreflang="es" lang="es" aria-current="page">ES</a>
+        <span aria-hidden="true">/</span>
+        <a data-language="en" href="register.en.html" hreflang="en" lang="en" >EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="practice-main" tabindex="-1">
+    <section class="form-intro" aria-labelledby="title">
+      <h1 data-copy="formTitle" id="title">Comprueba el formulario.</h1>
+      <p data-copy="formLead" class="lead">Práctica local. No envía datos ni crea una cuenta.</p>
+      <p data-copy="requiredHint">Los cuatro campos son obligatorios. Usa valores ficticios.</p>
+    </section>
+    <div class="form-content">
+      <p data-copy="unavailable" id="availability">Esta práctica necesita JavaScript para comprobar los campos. Permanecen deshabilitados mientras no esté disponible.</p>
+      <section id="errors" class="error-summary" aria-labelledby="error-title" tabindex="-1" hidden>
+        <h2 id="error-title">Revisa los campos indicados.</h2>
+        <ul id="error-list"></ul>
+      </section>
+      <form id="practice-form" method="post" novalidate autocomplete="off">
+        <fieldset id="practice-fields" disabled>
+          <legend data-copy="fieldsLegend" class="sr-only">Campos de ejemplo</legend>
+          <div class="field">
+            <label for="firstName" data-copy="firstName">Nombre ficticio</label>
+            <p data-copy="nameHint" class="hint" id="firstName-hint">Hasta 80 caracteres.</p>
+            <input id="firstName" type="text" maxlength="80" required autocomplete="off" aria-describedby="firstName-hint" />
+            <p id="firstName-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="lastName" data-copy="lastName">Apellidos ficticios</label>
+            <p data-copy="nameHint" class="hint" id="lastName-hint">Hasta 80 caracteres.</p>
+            <input id="lastName" type="text" maxlength="80" required autocomplete="off" aria-describedby="lastName-hint" />
+            <p id="lastName-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email" data-copy="email">Email de ejemplo</label>
+            <p data-copy="emailHint" class="hint" id="email-hint">Por ejemplo, ada@example.invalid. Solo se comprueba el formato.</p>
+            <input id="email" type="email" maxlength="254" required autocomplete="off" aria-describedby="email-hint" />
+            <p id="email-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="password" data-copy="password">Contraseña de ejemplo</label>
+            <p data-copy="passwordHint" class="hint" id="password-hint">Solo para practicar: 8–72 caracteres. No uses una contraseña real.</p>
+            <input id="password" type="password" maxlength="72" required autocomplete="off" aria-describedby="password-hint" />
+            <p id="password-error" class="field-error" hidden></p>
+          </div>
+          <div class="actions">
+            <button data-copy="check" type="submit">Comprobar formulario</button>
+            <button data-copy="clear" type="reset" class="secondary">Limpiar</button>
+          </div>
+        </fieldset>
+      </form>
+      <p id="result" class="result" role="status" tabindex="-1" hidden></p>
+    </div>
+  </main>
+  <footer><p data-copy="attribution">Práctica original en pareja · Manuel Naval y Alejandro Ramírez</p></footer>
 </body>
 </html>
